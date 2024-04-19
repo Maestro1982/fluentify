@@ -26,3 +26,8 @@
 
 - use for the card number repeadtly 42 till end
 - expire date and CC you can choose random ( must be higher than current date)
+
+# Images of the app
+
+![Landing page](image.png)
+![Login modal](image-1.png)

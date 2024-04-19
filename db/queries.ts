@@ -183,21 +183,19 @@ export const getLesson = cache(async (id?: number) => {
 export const getLessonPercentage = cache(async () => {
   const courseProgress = await getCourseProgress();
 
-  if (!courseProgress?.activeLessonId) {
-    return 0;
-  }
+  if (!courseProgress?.activeLessonId) return 0;
 
-  const lesson = await getLesson(courseProgress.activeLessonId);
+  const lesson = await getLesson(courseProgress?.activeLessonId);
 
-  if (!lesson) {
-    return 0;
-  }
+  if (!lesson) return 0;
 
   const completedChallenges = lesson.challenges.filter(
     (challenge) => challenge.completed
   );
-  const percentage =
-    Math.round(completedChallenges.length / lesson.challenges.length) * 100;
+
+  const percentage = Math.round(
+    (completedChallenges.length / lesson.challenges.length) * 100
+  );
 
   return percentage;
 });
@@ -244,4 +242,25 @@ export const getUserSubscription = cache(async () => {
     ...data,
     isActive: !!isActive,
   };
+});
+
+export const getTopTenUsers = cache(async () => {
+  const { userId } = auth();
+
+  if (!userId) {
+    return [];
+  }
+
+  const data = await db.query.userProgress.findMany({
+    orderBy: (userProgress, { desc }) => [desc(userProgress.points)],
+    limit: 10,
+    columns: {
+      userId: true,
+      userName: true,
+      userImageScr: true,
+      points: true,
+    },
+  });
+
+  return data;
 });

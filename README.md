@@ -25,7 +25,7 @@
 # Payment with Stripe instructions
 
 - use for the card number repeadtly 42 till end
-- expire date and CC you can choose random ( must be higher than current date)
+- expire date (must be higher than current date) and CC you can choose random for example 123
 
 # Images of the app
 

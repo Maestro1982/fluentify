@@ -29,5 +29,5 @@
 
 # Images of the app
 
-![Landing page](image.png)
-![Login modal](image-1.png)
+![Landing page](public/image.png)
+![Login modal](public/image-1.png)

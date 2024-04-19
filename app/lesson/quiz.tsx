@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 
 import { MAX_HEARTS, POINTS_TO_REFILL } from '@/constant';
 
-import { challengeOptions, challenges } from '@/db/schema';
+import { challengeOptions, challenges, userSubscription } from '@/db/schema';
 
 import { upsertChallengeProgress } from '@/actions/challenge-progress';
 import { reduceHearts } from '@/actions/user-progress';
@@ -31,7 +31,11 @@ type Props = {
     completed: boolean;
     challengeOptions: (typeof challengeOptions.$inferSelect)[];
   })[];
-  userSubscription: any; //TODO: Replace with subscription DB type
+  userSubscription:
+    | (typeof userSubscription.$inferSelect & {
+        isActive: boolean;
+      })
+    | null;
 };
 
 export const Quiz = ({
@@ -162,7 +166,7 @@ export const Quiz = ({
         <Confetti
           recycle={false}
           numberOfPieces={500}
-          tweenDuration={10000}
+          tweenDuration={10_000}
           width={width}
           height={height}
         />

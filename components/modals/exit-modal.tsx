@@ -40,7 +40,7 @@ export const ExitModal = () => {
           <div className='flex items-center justify-center w-full mb-5'>
             <Image src='/mascot_sad.svg' alt='Mascot' width={80} height={80} />
           </div>
-          <DialogTitle className='text-center font-bold text-2xl'>
+          <DialogTitle className='text-center font-bold text-2xl dark:text-slate-300'>
             Wait, don&apos;t go!
           </DialogTitle>
           <DialogDescription className='text-center text-base'>

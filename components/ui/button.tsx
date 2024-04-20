@@ -10,23 +10,25 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 text-slate-500',
+          'bg-white dark:bg-slate-800 text-black dark:text-slate-400 border-slate-200 dark:border-slate-700 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 dark:hover:bg-slate-900 text-slate-500 dark:text-slate-400',
         primary:
-          'bg-sky-400 text-primary-foreground hover:bg-sky-400/90 border-sky-500 border-b-4 active:border-b-0',
-        primaryOutline: 'bg-white text-sky-500 hover:bg-slate-100',
+          'bg-sky-400 dark:bg-sky-800 text-primary-foreground dark:text-slate-300 hover:bg-sky-400/90 dark:hover:bg-sky-600/90 border-sky-500 dark:border-sky-600 border-b-4 active:border-b-0',
+        primaryOutline:
+          'bg-white dark:bg-slate-800 text-sky-500 hover:bg-slate-100 dark:hover:bg-slate-600',
         secondary:
           'bg-lime-500 text-primary-foreground hover:bg-lime-500/90 border-lime-600 border-b-4 active:border-b-0',
         secondaryOutline: 'bg-white text-lime-500 hover:bg-slate-100',
         danger:
-          'bg-rose-500 text-primary-foreground hover:bg-rose-500/90 border-rose-600 border-b-4 active:border-b-0',
-        dangerOutline: 'bg-white text-rose-500 hover:bg-slate-100',
+          'bg-rose-500 dark:bg-rose-600 text-primary-foreground hover:bg-rose-500/90 dark:hover:bg-rose-600/80 border-rose-600 dark:border-rose-700 border-b-4 active:border-b-0',
+        dangerOutline:
+          'bg-white dark:bg-slate-800 text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-600',
         super:
           'bg-indigo-500 text-primary-foreground hover:bg-indigo-500/90 border-indigo-600 border-b-4 active:border-b-0',
         superOutline: 'bg-white text-indigo-500 hover:bg-slate-100',
         ghost:
-          'bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100',
+          'bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100 dark:hover:bg-slate-800',
         sidebar:
-          'bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none',
+          'bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 dark:hover:bg-slate-800 transition-none',
         sidebarOutline:
           'bg-sky-500/15 text-sky-500 border-sky-300 border-2 hover:bg-sky-500/20 transition-none',
         locked:

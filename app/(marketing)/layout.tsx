@@ -1,3 +1,5 @@
+'use client';
+
 import { Header } from '@/app/(marketing)/header';
 import { Footer } from '@/app/(marketing)/footer';
 

@@ -56,7 +56,7 @@ const LeaderboardPage = async () => {
           {leaderboard.map((userProgress, index) => (
             <div
               key={userProgress.userId}
-              className='w-full flex items-center p-2 px-4 rounded-xl hover:bg-gray-200/50'
+              className='w-full flex items-center p-2 px-4 rounded-xl hover:bg-gray-200/50 dark:hover:bg-slate-800'
             >
               {/* Ouput the position on the leaderboard through the index */}
               <p className='font-bold text-lime-700 mr-4'>{index + 1}</p>
@@ -67,7 +67,7 @@ const LeaderboardPage = async () => {
                   className='object-cover'
                 />
               </Avatar>
-              <p className='font-bold text-neutral-800 flex-1'>
+              <p className='font-bold text-neutral-800 dark:text-slate-400 flex-1'>
                 {userProgress.userName}
               </p>
               <p className='text-muted-foreground font-bold'>

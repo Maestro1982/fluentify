@@ -1,3 +1,5 @@
+'use client';
+
 import { MobileHeader } from '@/components/mobile-header';
 import { Sidebar } from '@/components/sidebar';
 

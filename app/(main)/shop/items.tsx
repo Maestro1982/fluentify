@@ -47,7 +47,7 @@ export const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
       <div className='flex items-center w-full p-4 gap-x-4 border-t-2'>
         <Image src='/heart.svg' alt='Heart' width={60} height={60} />
         <div className='flex-1'>
-          <p className='text-neutral-700 font-bold text-base lg:text-xl'>
+          <p className='text-neutral-700 dark:text-slate-500 font-bold text-base lg:text-xl'>
             Refill hearts
           </p>
         </div>
@@ -70,7 +70,7 @@ export const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
       <div className='w-full flex items-center p-4 pt-8 gap-x-4 border-t-2'>
         <Image src='/unlimited.svg' alt='Unlimited' width={60} height={60} />
         <div className='flex-1'>
-          <p className='text-neutral-700 font-bold text-base lg:text-xl'>
+          <p className='text-neutral-700 dark:text-slate-500 font-bold text-base lg:text-xl'>
             Unlimited hearts
           </p>
         </div>

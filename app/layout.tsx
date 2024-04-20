@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
-import { ClerkProvider } from '@clerk/nextjs';
 
 import { Toaster } from '@/components/ui/sonner';
 
@@ -9,6 +8,8 @@ import { HeartsModal } from '@/components/modals/hearts-modal';
 import { PracticeModal } from '@/components/modals/practice-modal';
 
 import './globals.css';
+import { ThemeProvider } from '@/providers/theme-provider';
+import { ClerkProvider } from '@/providers/clerk-provider';
 
 const font = Nunito({ subsets: ['latin'] });
 
@@ -23,16 +24,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang='en'>
-        <body className={font.className}>
-          <Toaster richColors />
-          <ExitModal />
-          <HeartsModal />
-          <PracticeModal />
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang='en'>
+      <body className={font.className}>
+        <Toaster richColors />
+        <ExitModal />
+        <HeartsModal />
+        <PracticeModal />
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClerkProvider>{children}</ClerkProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

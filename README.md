@@ -21,6 +21,7 @@
 - 💾 PostgresDB using NeonDB
 - 🚀 Deployment on Vercel
 - 📱 Mobile responsiveness
+- 💡 Light and darkmode option
 
 # Payment with Stripe instructions
 

@@ -32,7 +32,7 @@ export const PracticeModal = () => {
             <Image src='/heart.svg' alt='Heart' height={100} width={100} />
           </div>
 
-          <DialogTitle className='text-center text-2xl font-bold'>
+          <DialogTitle className='text-center text-2xl font-bold dark:text-slate-300'>
             Practice lesson
           </DialogTitle>
 

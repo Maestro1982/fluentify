@@ -62,7 +62,7 @@ const QuestsPage = async () => {
                     height={60}
                   />
                   <div className='flex flex-col w-full gap-y-2'>
-                    <p className='text-neutral-700 font-bold text-xl'>
+                    <p className='text-neutral-700 dark:text-slate-500 font-bold text-xl'>
                       {quest.title}
                     </p>
                     <Progress value={progress} className='h-3' />

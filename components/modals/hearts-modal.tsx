@@ -44,7 +44,7 @@ export const HeartsModal = () => {
             />
           </div>
 
-          <DialogTitle className='text-center text-2xl font-bold'>
+          <DialogTitle className='text-center text-2xl font-bold dark:text-slate-500'>
             You ran out of hearts!
           </DialogTitle>
 

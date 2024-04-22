@@ -30,9 +30,9 @@
 
 # Images of the app
 
-![Landing page](image.png)
-![Login modal](image-1.png)
-![Learn Page](image-2.png)
-![Leaderboard Page](image-3.png)
-![Quests Page](image-4.png)
-![Shop Page](image-5.png)
+![Landing page](public/image.png)
+![Login modal](public/image-1.png)
+![Learn Page](public/image-2.png)
+![Leaderboard Page](public/image-3.png)
+![Quests Page](public/image-4.png)
+![Shop Page](public/image-5.png)

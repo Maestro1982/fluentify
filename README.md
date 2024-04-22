@@ -28,9 +28,14 @@
 - use for the card number repeadtly 42 till end
 - expire date (must be higher than current date) and CC you can choose random for example 123
 
-⚙️ Tech Stack
+# Tech Stack
 
-React JS Next JS Typescript Tailwind CSS Vercel Postgresql
+- ReactJS
+- NextJS
+- Typescript
+- Tailwind CSS
+- Vercel
+- Postgresql
 
 # Images of the app
 

@@ -6,6 +6,7 @@ import { Loader } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 import { SidebarItem } from '@/components/sidebar-item';
+import { ModeToggle } from '@/components/mode-toggle';
 
 type Props = {
   className?: string;
@@ -42,7 +43,10 @@ export const Sidebar = ({ className }: Props) => {
           <Loader className='w-5 h-5 text-muted-foreground animate-spin' />
         </ClerkLoading>
         <ClerkLoaded>
-          <UserButton afterSignOutUrl='/' />
+          <div className='flex justify-between'>
+            <UserButton afterSignOutUrl='/' />
+            <ModeToggle />
+          </div>
         </ClerkLoaded>
       </div>
     </div>

@@ -6,6 +6,8 @@ import { getUserProgress, getUserSubscription } from '@/db/queries';
 import { StickyWrapper } from '@/components/sticky-wrapper';
 import { UserProgress } from '@/components/user-progress';
 import { FeedWrapper } from '@/components/feed-wrapper';
+import { Promo } from '@/components/promo';
+import { Quests } from '@/components/quests';
 
 import { Items } from '@/app/(main)/shop/items';
 
@@ -34,6 +36,8 @@ const ShopPage = async () => {
           points={userProgress.points}
           hasActiveSubscription={isPro}
         />
+        {!isPro && <Promo />}
+        <Quests points={userProgress.points} />
       </StickyWrapper>
       <FeedWrapper>
         <div className='flex flex-col w-full items-center'>
